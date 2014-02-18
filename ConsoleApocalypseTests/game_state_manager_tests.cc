@@ -31,7 +31,7 @@ namespace console_apoc {
 			}
 		}
 
-		GameStateInterface* current_state() {
+		GameState* current_state() {
 			return manager_with_initial_state_->current_game_state();
 		}
 

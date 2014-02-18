@@ -3,7 +3,7 @@
 
 namespace console_apoc {
 
-	GameStateManager::GameStateManager(GameStateInterface *initial_game_state) {
+	GameStateManager::GameStateManager(GameState *initial_game_state) {
 		if (initial_game_state != NULL) {
 			current_game_state_ = initial_game_state;
 		} else {
@@ -19,12 +19,12 @@ namespace console_apoc {
 		}
 	}
 
-	GameStateInterface* GameStateManager::current_game_state() const {
+	GameState* GameStateManager::current_game_state() const {
 		return current_game_state_;
 	}
 
 	bool GameStateManager::change_state(bool stop_previous_state) {
-		GameStateInterface *next_game_state = current_game_state_->
+		GameState *next_game_state = current_game_state_->
 												get_next_state();
 		if (stop_previous_state) {
 			current_game_state_->stop();
