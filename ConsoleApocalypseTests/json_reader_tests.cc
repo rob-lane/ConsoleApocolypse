@@ -11,18 +11,21 @@ namespace console_apoc {
 		}
 
 		JsonReader *json_reader_;
-		const string test_json_file_ = "test_groups.json";
+		const string test_json_file_ = ".\\test_json_groups.json";
 	};
-
-
-	TEST_F(JsonReaderTest, CreatesJsonReader) {
-		string error_msg = "JsonReader should create a new Json::Reader";
-		ASSERT_TRUE(json_reader_->reader() != NULL) << error_msg;
-	}
 	
 	TEST_F(JsonReaderTest, CapturesRootElement) {
 		string error_msg = "JsonReader should capture the root element of the \
 						   JSON document";
 		ASSERT_TRUE(json_reader_->root() != NULL) << error_msg;
+	}
+
+	TEST_F(JsonReaderTest, LocatesElementByName) {
+		string error_msg = "JsonReader should locate an element in the JSON by name";
+		Json::Value group_element = json_reader_->find_element("group1");
+		EXPECT_TRUE(group_element != NULL) << error_msg;
+
+		group_element = json_reader_->find_element("name");
+		EXPECT_TRUE(group_element != NULL) << error_msg;
 	}
 }
