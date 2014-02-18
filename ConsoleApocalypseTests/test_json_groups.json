@@ -1,0 +1,12 @@
+{
+    "group1": {
+		"name": "Joe", 
+		"age": 15, 
+		"description": "A guy named joe!"
+	}, 
+	"group2": {
+		"name": "Rob", 
+		"age": 28, 
+		"description": "A programmer named Rob!"
+	}
+}

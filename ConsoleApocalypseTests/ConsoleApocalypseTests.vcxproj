@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,13 +53,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Rob Lane\My Libs\gmock-1.7.0\gtest\include;C:\Users\Rob Lane\My Libs\gmock-1.7.0\include;C:\Users\Rob Lane\My Dev\cpp\ConsoleApocalypse\ConsoleApocalypseLib\include;C:\Users\Rob Lane\My Dev\cpp\ConsoleApocalypse\ConsoleApocalypseTests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Rob Lane\My Libs\gmock-1.7.0\msvc\2010\Debug;C:\Users\Rob Lane\My Libs\gmock-1.7.0\gtest\msvc\gtest\Debug;C:\Users\Rob Lane\My Dev\cpp\ConsoleApocalypse\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib\$(ConfigurationName);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;gmock.lib;gtestd.lib;ConsoleApocalypseLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -82,8 +83,10 @@
   <ItemGroup>
     <ClCompile Include="game_state_manager_tests.cc" />
     <ClCompile Include="intro_game_state_tests.cc" />
+    <ClCompile Include="json_reader_tests.cc" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player_tests.cc" />
+    <ClCompile Include="story_board_tests.cc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsoleApocalypseLib\ConsoleApocalypseLib.vcxproj">
@@ -92,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\mock_intro_game_state.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test_json_groups.json" />
+    <None Include="test_story_board.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

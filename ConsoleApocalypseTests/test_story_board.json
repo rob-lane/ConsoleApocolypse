@@ -1,0 +1,12 @@
+{ "storyBoard":
+	[
+		{
+			"type": "Intro", 
+			"introText": "Welcome to the super awesome test game!"
+		},
+		{
+			"type": "Intro", 
+			"introText": "Of course this is just a test..."
+		}	
+	]
+}

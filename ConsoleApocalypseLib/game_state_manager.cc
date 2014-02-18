@@ -3,7 +3,7 @@
 
 namespace console_apoc {
 
-	GameStateManager::GameStateManager(GameStateInterface *initial_game_state) {
+	GameStateManager::GameStateManager(GameState *initial_game_state) {
 		if (initial_game_state != NULL) {
 			current_game_state_ = initial_game_state;
 		} else {
@@ -14,29 +14,32 @@ namespace console_apoc {
 	GameStateManager::~GameStateManager() {
 		if (current_game_state_ != NULL) {
 			current_game_state_->stop();
-			delete current_game_state_;
 			current_game_state_ = NULL;
 		}
 	}
 
-	GameStateInterface* GameStateManager::current_game_state() const {
+	GameState* GameStateManager::current_game_state() const {
 		return current_game_state_;
 	}
 
-	bool GameStateManager::change_state(bool stop_previous_state) {
-		GameStateInterface *next_game_state = current_game_state_->
-												get_next_state();
+	bool GameStateManager::change_state(bool stop_previous_state, 
+                                      GameState* new_state) {
+    GameState *next_state = NULL;
+    if (new_state == NULL) {
+      next_state = current_game_state_->get_next_state();
+    }
+    else {
+      next_state = new_state;
+    }
 		if (stop_previous_state) {
 			current_game_state_->stop();
 		}
 		
-		if (next_game_state != NULL) {
-			current_game_state_ = next_game_state;
-			current_game_state_->start();
+		if (next_state != NULL) {
+			current_game_state_ = next_state;
 			return true;
 		}
 		else {
-			delete current_game_state_;
 			current_game_state_ = NULL;
 			return false;
 		}
@@ -49,7 +52,6 @@ namespace console_apoc {
 
 	void GameStateManager::stop() {
 		current_game_state_->stop();
-		delete current_game_state_;
 		current_game_state_ = NULL;
 	}
 

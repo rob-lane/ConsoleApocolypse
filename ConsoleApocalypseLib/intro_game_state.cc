@@ -29,14 +29,6 @@ namespace console_apoc{
 		return *(new string("Introduction State"));
 	}
 
-	GameStateInterface* IntroGameState::get_next_state() {
-		return next_game_state_;
-	}
-
-	void IntroGameState::set_next_state(GameStateInterface* next_state) {
-		next_game_state_ = next_state;
-	}
-
 	void IntroGameState::initialize() {
 
 	}

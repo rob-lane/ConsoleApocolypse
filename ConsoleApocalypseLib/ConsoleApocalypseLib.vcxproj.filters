@@ -27,18 +27,33 @@
     <ClCompile Include="game_state_manager.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="json_reader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="story_board.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game_state.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\player.h">
+    <ClInclude Include="..\include\game_state_manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\game_state_manager.h">
+    <ClInclude Include="..\include\intro_game_state.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\game_state_interface.h">
+    <ClInclude Include="..\include\player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\intro_game_state.h">
+    <ClInclude Include="..\include\story_board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json_reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\game_state.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
