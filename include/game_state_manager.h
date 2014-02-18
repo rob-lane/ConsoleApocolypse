@@ -11,7 +11,8 @@ namespace console_apoc {
 		virtual ~GameStateManager();
 		
 		GameState* current_game_state() const;
-		bool change_state(bool stop_previous_state = true);
+		bool change_state(bool stop_previous_state = true, 
+                      GameState* new_state = NULL);
 		
 		void start_current_state();
 		void stop();

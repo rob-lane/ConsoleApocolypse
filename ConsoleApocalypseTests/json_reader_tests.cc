@@ -9,6 +9,12 @@ namespace console_apoc {
 		void SetUp() {
 			json_reader_ = new JsonReader(test_json_file_);
 		}
+		void TearDown() {
+			if (json_reader_ != NULL) {
+				delete json_reader_;
+				json_reader_ = NULL;
+			}
+		}
 
 		JsonReader *json_reader_;
 		const string test_json_file_ = ".\\test_json_groups.json";

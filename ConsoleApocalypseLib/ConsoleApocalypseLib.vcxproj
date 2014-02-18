@@ -83,13 +83,15 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="game_state.cc" />
     <ClCompile Include="game_state_manager.cc" />
     <ClCompile Include="intro_game_state.cc" />
     <ClCompile Include="json_reader.cc" />
     <ClCompile Include="player.cc" />
+    <ClCompile Include="story_board.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\game_state_interface.h" />
+    <ClInclude Include="..\include\game_state.h" />
     <ClInclude Include="..\include\game_state_manager.h" />
     <ClInclude Include="..\include\intro_game_state.h" />
     <ClInclude Include="..\include\json_reader.h" />

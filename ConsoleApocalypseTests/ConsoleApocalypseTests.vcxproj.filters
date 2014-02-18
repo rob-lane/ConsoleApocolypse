@@ -30,6 +30,9 @@
     <ClCompile Include="json_reader_tests.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="story_board_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\mock_intro_game_state.h">
@@ -38,5 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="test_json_groups.json" />
+    <None Include="test_story_board.json" />
   </ItemGroup>
 </Project>
