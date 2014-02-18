@@ -36,4 +36,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="test_json_groups.json" />
+  </ItemGroup>
 </Project>

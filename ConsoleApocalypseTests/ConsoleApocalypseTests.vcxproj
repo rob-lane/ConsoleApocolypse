@@ -95,6 +95,9 @@
   <ItemGroup>
     <ClInclude Include="include\mock_intro_game_state.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="test_json_groups.json" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
