@@ -27,6 +27,9 @@
     <ClCompile Include="intro_game_state_tests.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="json_reader_tests.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\mock_intro_game_state.h">

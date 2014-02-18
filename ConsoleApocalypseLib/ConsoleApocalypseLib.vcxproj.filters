@@ -27,6 +27,9 @@
     <ClCompile Include="game_state_manager.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="json_reader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\game_state_interface.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\story_board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json_reader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

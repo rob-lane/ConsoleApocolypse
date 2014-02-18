@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(ProjectDir)\obj\$(Configuration)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -83,6 +83,7 @@
   <ItemGroup>
     <ClCompile Include="game_state_manager_tests.cc" />
     <ClCompile Include="intro_game_state_tests.cc" />
+    <ClCompile Include="json_reader_tests.cc" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player_tests.cc" />
   </ItemGroup>
